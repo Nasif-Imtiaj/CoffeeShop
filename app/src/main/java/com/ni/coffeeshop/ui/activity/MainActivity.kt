@@ -1,4 +1,4 @@
-package com.ni.coffeeshop.activity
+package com.ni.coffeeshop.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
