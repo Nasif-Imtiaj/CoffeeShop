@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Project specific colors -->
+    <color name="coffee_orange">#D1512D</color>
+    <color name="coffee_dark_purple">#411530</color>
+    <color name="coffee_mud">#F5C7A9</color>
+    <color name="coffee_light">#F5E8E4</color>
+    <color name="coffee_yellow">#F2C217</color>
 </resources>
