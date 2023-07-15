@@ -11,7 +11,7 @@ I am attaching the resources that I will be following while doing the project.
 
 ## Design Patterns ##
 - https://refactoring.guru/design-patterns
-- 
+
 ## SOLID ##
 
 ## UI Design ##
