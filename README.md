@@ -6,7 +6,7 @@ I am attaching the resources that I will be following while doing the project.
 ## MVVM ##
 - https://amitshekhar.me/blog/mvvm-architecture-android
 - https://blog.mindorks.com/mvi-architecture-android-tutorial-for-beginners-step-by-step-guide/
-- 
+
 ## Clean Code Architecture ##
 
 ## Design Patterns ##
