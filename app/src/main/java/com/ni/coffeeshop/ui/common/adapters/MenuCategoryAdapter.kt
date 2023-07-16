@@ -21,7 +21,7 @@ class MenuCategoryAdapter() : RecyclerView.Adapter<MenuCategoryAdapter.ViewHolde
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuCategoryAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_menu, parent, false)
+            .inflate(R.layout.item_category, parent, false)
         return ViewHolder(view)
     }
 
