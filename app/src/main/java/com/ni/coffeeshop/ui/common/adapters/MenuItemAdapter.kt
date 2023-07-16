@@ -1,4 +1,4 @@
-package com.ni.coffeeshop.ui.common.adapter
+package com.ni.coffeeshop.ui.common.adapters
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ni.coffeeshop.R
 
 
-class MenuItem() : RecyclerView.Adapter<MenuItem.ViewHolder>() {
+class MenuItemAdapter() : RecyclerView.Adapter<MenuItemAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.tvItemName)
     }
@@ -21,13 +21,13 @@ class MenuItem() : RecyclerView.Adapter<MenuItem.ViewHolder>() {
         Log.d("TESTSIZE", "setItemList: ${itemNamesList.size}")
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuItem.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuItemAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_menu, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MenuItem.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MenuItemAdapter.ViewHolder, position: Int) {
         holder.textView.text = itemNamesList[position]
     }
 

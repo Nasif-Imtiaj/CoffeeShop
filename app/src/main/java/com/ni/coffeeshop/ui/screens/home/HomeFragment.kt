@@ -7,16 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ni.coffeeshop.databinding.FragmentHomeBinding
-import com.ni.coffeeshop.ui.common.adapter.MenuItem
+import com.ni.coffeeshop.ui.common.adapters.MenuItemAdapter
 
 class HomeFragment : Fragment() {
 
     companion object {
         fun newInstance() = HomeFragment()
     }
+
     private lateinit var binding: FragmentHomeBinding
     private lateinit var viewModel: HomeViewModel
-    private lateinit var adapter: MenuItem
+    private lateinit var menuItemAdapter: MenuItemAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,25 +29,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = MenuItem()
-        adapter.setItemList(getData())
-        binding.rcMenu.adapter = adapter
-        adapter.notifyDataSetChanged()
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-
-    }
-
-    private fun getData(): ArrayList<String> {
-        // Replace with your own data retrieval logic
-        var list = ArrayList<String>()
-        list.add("Item 1")
-        list.add("Item 2")
-        list.add("Item 3")
-        return list
+        viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+        menuItemAdapter = MenuItemAdapter()
+        menuItemAdapter.setItemList(viewModel.getMenuList())
+        binding.rcMenu.adapter = menuItemAdapter
     }
 
 }
