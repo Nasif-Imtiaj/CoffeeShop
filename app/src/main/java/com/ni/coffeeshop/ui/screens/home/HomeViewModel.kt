@@ -3,17 +3,17 @@ package com.ni.coffeeshop.ui.screens.home
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
-    private var menuList = ArrayList<String>()
+    private var menuCategoryList = ArrayList<String>()
     init {
-        generateMenuList()
+        generateMenuCategoryList()
     }
 
-    private fun generateMenuList(){
-        menuList.add("Item 1")
-        menuList.add("Item 2")
-        menuList.add("Item 3")
+    private fun generateMenuCategoryList(){
+        menuCategoryList.add("Item 1")
+        menuCategoryList.add("Item 2")
+        menuCategoryList.add("Item 3")
     }
-    fun getMenuList(): ArrayList<String>{
-        return menuList;
+    fun getMenuCategoryList(): ArrayList<String>{
+        return menuCategoryList
     }
 }

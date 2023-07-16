@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ni.coffeeshop.databinding.FragmentHomeBinding
-import com.ni.coffeeshop.ui.common.adapters.MenuItemAdapter
+import com.ni.coffeeshop.ui.common.adapters.MenuCategoryAdapter
 
 class HomeFragment : Fragment() {
 
@@ -17,7 +17,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var viewModel: HomeViewModel
-    private lateinit var menuItemAdapter: MenuItemAdapter
+    private lateinit var menuCategoryAdapter: MenuCategoryAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,9 +30,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
-        menuItemAdapter = MenuItemAdapter()
-        menuItemAdapter.setItemList(viewModel.getMenuList())
-        binding.rcMenu.adapter = menuItemAdapter
+        menuCategoryAdapter = MenuCategoryAdapter()
+        menuCategoryAdapter.setList(viewModel.getMenuCategoryList())
+        binding.rcMenu.adapter = menuCategoryAdapter
     }
 
 }
