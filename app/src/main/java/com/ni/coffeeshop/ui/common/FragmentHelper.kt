@@ -34,6 +34,44 @@ class FragmentHelper : FragmentActivity() {
             } catch (ex: Exception) {
             }
         }
+
+        fun loadFragment(
+            activity: AppCompatActivity,
+            newFragment: Fragment,
+            addToBackStack: Boolean = true,
+            clearBackStack: Boolean = false,
+            tag: String,
+            container: Int,
+        ) {
+            try {
+                val mFragmentManager: FragmentManager = activity.supportFragmentManager
+                if (clearBackStack) {
+                    if (mFragmentManager.isStateSaved) {
+                        return
+                    }
+                    mFragmentManager.popBackStackImmediate(
+                        null,
+                        FragmentManager.POP_BACK_STACK_INCLUSIVE
+                    )
+                }
+                val fragmentTransaction =
+                    mFragmentManager.beginTransaction()
+                fragmentTransaction.add(
+                    container,
+                    newFragment,
+                    tag
+                )
+                if (addToBackStack) fragmentTransaction.addToBackStack(tag)
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                if (mFragmentManager.isStateSaved) {
+                    fragmentTransaction.commitAllowingStateLoss()
+                } else {
+                    fragmentTransaction.commit()
+                }
+            } catch (ex: Exception) {
+            }
+        }
+
     }
 
 }
