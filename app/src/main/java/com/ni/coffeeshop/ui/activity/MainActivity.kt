@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val activity = this
+        supportActionBar?.hide()
         FragmentHelper.loadFragment(
             activity,
             HomeFragment.newInstance(),
