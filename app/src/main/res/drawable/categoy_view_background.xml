@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#D1512D" /> <!-- Set the background color here -->
+            <corners android:topLeftRadius="24dp" /> <!-- Set the top-left corner radius for a rounded effect -->
+            <corners android:topRightRadius="24dp" /> <!-- Set the top-right corner radius for a rounded effect -->
+        </shape>
+    </item>
+</layer-list>

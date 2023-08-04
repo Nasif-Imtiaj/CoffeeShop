@@ -32,6 +32,13 @@ class HomeViewModel : ViewModel() {
         menuCategoryList.add("Item 1")
         menuCategoryList.add("Item 2")
         menuCategoryList.add("Item 3")
+        menuCategoryList.add("Item 3")
+        menuCategoryList.add("Item 3")
+        menuCategoryList.add("Item 3")
+        menuCategoryList.add("Item 3")
+        menuCategoryList.add("Item 3")
+        menuCategoryList.add("Item 3")
+
     }
 
     fun getMenuCategoryList(): ArrayList<String> {

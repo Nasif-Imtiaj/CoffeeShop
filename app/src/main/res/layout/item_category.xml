@@ -10,6 +10,7 @@
         android:layout_height="100dp"
         android:rotation="-90"
         android:text="Coffee"
+        android:textColor="@color/white"
         android:layout_gravity="bottom"
         android:gravity="center"
         android:textSize="16sp"
